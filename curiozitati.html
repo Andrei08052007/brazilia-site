@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div style="text-align: center; padding: 20px; border: 2px solid #009739; border-radius: 10px; background-color: #f0f0f0; max-width: 500px; margin: 20px auto;">
+    <h3>Știai că...?</h3>
+    <p id="curiozitate-text" style="font-style: italic; min-height: 60px;">Apasă butonul pentru o curiozitate despre Brazilia!</p>
+    
+    <button onclick="afiseazaCuriozitate()" style="background-color: #FFDF00; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 5px;">
+        Alta curiozitate
+    </button>
+</div>
+
+<script>
+const curiozitati = [
+    "Brazilia are al doilea cel mai mare număr de aeroporturi din lume, după SUA – peste 2.500.",
+    "Cea mai mare comunitate japoneză din afara Japoniei trăiește în Brazilia.",
+    "Există un râu subteran la 4 km sub Amazon, la fel de lung ca Amazonul, dar de sute de ori mai lat.",
+    "În 2008, sistemul de sănătate public din Brazilia a devenit primul din lume care acoperă gratuit operațiile de schimbare de sex.",
+    "Prizonierii pot reduce pedeapsa cu 4 zile pentru fiecare carte citită și comentată.",
+    "În 1932, atleții braziliene au vândut cafea pe drum spre Jocurile Olimpice din Los Angeles, ca să strângă bani.",
+    "Rio de Janeiro înseamnă „Râul Ianuarie”, numit astfel din greșeală – un explorator a confundat un golf cu un râu.",
+    "În 2010, un clovn numit „Tiririca” a devenit cel mai votat congresman din istoria alegerilor braziliene.",
+    "60% din pădurea Amazoniană se află în Brazilia.",
+    "Există încă aproximativ 70 de triburi indigene necontactate în profunzimea junglei.",
+    "Pizza este mâncarea preferată a locuitorilor din São Paulo – se consumă zilnic 1,5 milioane de pizza în țară.",
+    "Gestul „OK” este ofensator în Brazilia, fiind asociat cu „zero” sau „nimic” într-un mod jignitor.",
+    "Brazilia este singura țară unde, la examenul auto, trebuie să demonstrezi că știi să driblezi, ca la fotbal.",
+    "Pe plaja Areia Preta din Guarapari, nisipul este radioactiv, dar turiștii fac „cure” cu el, crezând că are efecte vindecătoare.",
+    "Cascada Mocona se formează pe lateralul unui râu, fiind una dintre puținele cascade orizontale din lume.",
+    "Un brazilian s-a deghizat în bătrână pentru a da examenul auto în locul mamei sale.",
+    "În 1987, doi hoți de fier vechi au provocat o catastrofă radioactivă în Goiânia.",
+    "Sunt 200 de milioane de movile construite de termite în Brazilia, acoperind o suprafață cât Regatul Unit.",
+    "Populația mixtă a Braziliei conține variante genetice unice pentru longevitate.",
+    "În orașul Santos, 90 de blocuri s-au înclinat vizibil din cauza solului și a construcției."
+];
+
+function afiseazaCuriozitate() {
+    const indexAleator = Math.floor(Math.random() * curiozitati.length);
+    document.getElementById("curiozitate-text").innerText = curiozitati[indexAleator];
+}
+</script>
