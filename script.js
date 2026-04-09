@@ -22,6 +22,10 @@ function startQuiz() {
   current = 0;
   score = 0;
   document.getElementById("score").innerText = "Scor: 0/" + quizData.length;
+
+  // ascunde butonul Start
+  document.getElementById("startBtn").style.display = "none";
+
   showQ();
 }
 
@@ -47,9 +51,8 @@ function answer(i, btn) {
   const buttons = document.getElementById("answers").children;
 
   // colorează răspunsurile
-  for (let b of buttons) {
-    b.disabled = true;
-  }
+  for (let b of buttons) b.disabled = true;
+
   if (i === correctIndex) {
     btn.style.backgroundColor = "green";
     btn.style.color = "white";
@@ -61,16 +64,21 @@ function answer(i, btn) {
     buttons[correctIndex].style.color = "white";
   }
 
-  // actualizează scorul cu efect
+  // actualizează scorul live
   document.getElementById("score").innerText = "Scor: " + score + "/" + quizData.length;
 
   // trece la următoarea întrebare după 1 sec
   setTimeout(() => {
     current++;
-    if (current < quizData.length) showQ();
-    else {
+    if (current < quizData.length) {
+      showQ();
+    } else {
       document.getElementById("q").innerText = "Quiz terminat!";
       document.getElementById("answers").innerHTML = "";
+
+      // arată din nou butonul Start pentru restart
+      document.getElementById("startBtn").style.display = "inline-block";
+      document.getElementById("startBtn").innerText = "Restart Quiz";
     }
   }, 1000);
 }
