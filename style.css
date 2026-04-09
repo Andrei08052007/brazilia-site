@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #009c3b, #ffdf00);
+}
+
+header {
+    background: #002776;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: green;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.container {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid img {
+    width: 30%;
+}
